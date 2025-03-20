@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { TodoProvider } from "./contexts/index.js";
 import TodoForm from "./components/TodoForm.jsx";
 import TodoItem from "./components/TodoItem.jsx";
+import { Analytics } from "@vercel/analytics/react";
 
 function App() {
   const [todos, setTodos] = useState([]);
@@ -51,6 +52,9 @@ function App() {
             ))}
           </div>
         </div>
+      </div>
+      <div>
+        <Analytics />
       </div>
     </TodoProvider>
   );
